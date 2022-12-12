@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <title>Document</title>
+
+    <script>
+       let dollarUS = Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+});
+    </script>
+</head>
+<body>
+    
+        
+    <div class="container">
+
+<u>
+    <h1 style="color: blue;">javaBook </h1>
+</u>
+<script>
+
+    document.write("<div>" + "ISBN   : " + javaBook.ISBN + "<br>" + "Title  :  " + javaBook.Title + " <br> " + " Price : " + "  " +dollarUS.format(javaBook.Price) 
+        + "<br>  " + "Publisher :  " + javaBook.Publisher + "<br>" + "Author :  " + javaBook.AuthorFname +"  "+ javaBook.AuthorLName + "<br>" + "Copyright  : " + javaBook.Copyright + "<br>" + "Comments :" + javaBook.Comments + "</div>" + "<br>");
+
+</script>
+
+</div>
+
+<div class="container">
+<u>
+    <h1 style="color: blue;">VB6Book </h1>
+</u>
+<script>
+
+    document.write("<div>" + "ISBN   : " + VB6Book.ISBN + "<br>" + "Title  :  " + VB6Book.Title + " <br> " + " Price : " + "  " +dollarUS.format(VB6Book.Price) 
+        + "<br>  " + "Publisher :  " + VB6Book.Publisher + "<br>" + "Authors :  " + VB6Book.Authors[0]+ " "+ VB6Book.Authors[1] + "<br>" + "Copyright  : " + VB6Book.Copyright + "<br>" + "Comments :" + VB6Book.Comments + "</div>" + "<br>");
+
+</script>
+</div>
+
+<div style="border:4px solid red;width:fit-content">
+
+<script >
+    //Price of 5 Java books
+    let priceForFiveJava = multiply(javaBook.Price,5);
+    let priceForFiveVB6Book = multiply(VB6Book.Price,5);
+document.write("Five Java books costs :   "+ dollarUS.format(priceForFiveJava)  + "<br>"+"<br>"+
+"Five VB6Book books costs :   "+ dollarUS.format(priceForFiveVB6Book) );
+</script>
+
+</div>
+   
+</body>
+</html>
